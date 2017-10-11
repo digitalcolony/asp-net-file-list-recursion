@@ -10,7 +10,7 @@ The job we want the code to perform is to start in the root folder and build a l
 
 When executed, **scan-website-for-files.aspx.cs** will build a list of every .ASPX file on the web server. Note that I add an underscore to the beginning of files that I don’t wish to include on the list of indexed URLs.
 
-```asp
+```cs
 public ArrayList urlList;
 
 public void ScanWebsiteForFiles(DirectoryInfo directory)
@@ -34,7 +34,7 @@ public void ScanWebsiteForFiles(DirectoryInfo directory)
 }
 ```
 
-```asp
+```cs
 string dirName = HttpContext.Current.Server.MapPath("~/");
 DirectoryInfo rootDirectory = new DirectoryInfo(dirName);
 ScanWebsiteForFiles(rootDirectory);
